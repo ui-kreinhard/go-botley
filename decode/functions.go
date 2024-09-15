@@ -38,3 +38,17 @@ func DecodeTiming(timing []int) (ret []Part) {
 	}
 	return
 }
+
+func ExtractSingleCommand(timings []int) []Part {
+	d := DecodeTimingWithoutPreambleAndSkipEnd(timings)
+	return d[0:16]
+}
+
+func DecodeTimingWithoutPreambleAndSkipEnd(timings []int) []Part {
+	d := DecodeTimingWithoutPreamble(timings)
+	return d[:len(d)-1]
+}
+
+func DecodeTimingWithoutPreamble(timings []int) []Part {
+	return DecodeTiming(timings[272:])
+}

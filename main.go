@@ -13,16 +13,16 @@ func main() {
 	program := command.Program{
 		Name: "botleyTest",
 		Bursts: []command.Burst{
+			command.Forward,
 			command.Backward,
-			command.Rotate90,
-			command.Rotate90,
+			command.RotateRight90,
+			command.RotateLeft90,
 		},
 	}
 	outputFlipperIrFile("/tmp/botley_synth.ir", program)
 }
 
 func outputFlipperIrFile(path string, program command.Program) error {
-
 	raw := program.Render()
 
 	rawString := ""
