@@ -1,17 +1,25 @@
 package command
 
-var Forward Burst = Burst{
+var Forward = Burst{
 	parts: []Part{StartOfBurst, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, One},
 }
 
-var Backward Burst = Burst{
+var Backward = Burst{
 	parts: []Part{StartOfBurst, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, One, Mark, Zero},
 }
 
-var RotateRight90 Burst = Burst{
+var RotateRight90 = Burst{
 	parts: []Part{StartOfBurst, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, One, Mark, Zero, Mark, Zero},
 }
 
-var RotateLeft90 Burst = Burst{
+var RotateLeft90 = Burst{
 	parts: []Part{StartOfBurst, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, One, Mark, One},
+}
+
+var RotateRight45 = Burst{
+	parts: []Part{StartOfBurst, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, One, Mark, One, Mark, Zero},
+}
+
+var RotateLeft45 = Burst{
+	parts: []Part{StartOfBurst, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, Zero, Mark, One, Mark, Zero, Mark, One},
 }
